@@ -91,12 +91,12 @@ to save to the file.
 
 ##### Other Component
 The *Search Sequence Diagram* below shows how the components interact with each other in the scenario where the user issues the command ```search keyword```
-
 ###### Search Command Sequence Diagram
 ![SearchCommand Sequence Diagram](images/SearchSequenceDiagram.png)
 
-The following *Object Diagram* gives an overview of which objects are accessed and associated with the execution of the `Search` command.
+<div style="page-break-after: always;"></div>
 
+The following *Object Diagram* gives an overview of which objects are accessed and associated with the execution of the `Search` command.
 ###### Search Command Object Diagram
 ![SearchCommand Object Diagram](images/SearchCommandObjectDiagram.png)
 
@@ -142,19 +142,15 @@ It extends Command and TransactionList to get the correct index to remove.
 Given below is an example usage scenario and how the `Report` mechanism behaves at each step.
 
 Step 1. The user launches the application for the first time. The TransactionList is empty.
-
 ![Sample - Stage1](images/ReportFeature_Stage1.png)
 
 Step 2. User executes ```add Lunch at ...``` to add a new transaction. The ```add``` command will save the record into TransactionList. User will continue to add another 5 more records to the TransactionList. There are a total of 6 Transactions saved.
-
 ![Sample - Stage2](images/DeleteFeature_Stage2.png)
 
-<div style="page-break-after: always;"></div>
-
 Step 3. User executes ```delete 3``` command to delete the 3rd transaction in the Expenses Tracking Application. TransactionList will be left with 5 records after User delete successfully.
-
 ![Sample - Stage3](images/DeleteFeature_Stage3.png)
 
+<div style="page-break-after: always;"></div>
 
 ##### Report Feature
 
@@ -164,25 +160,18 @@ It extends Command and TransactionList, get all the transactions and generate re
 Given below is an example usage scenario and how the report mechanism behaves at each step.
 
 Step 1. The user launches the application for the first time. The TransactionList is empty.
-
 ![Sample - Stage1](images/ReportFeature_Stage1.png)
 
 Step 2. User executes ```add Lunch at ...``` to add a new transaction. The ```add``` command will save the record into TransactionList.
-
 ![Sample - Stage2](images/ReportFeature_Stage2.png)
 
-<div style="page-break-after: always;"></div>
-
 Step 3. After user enters multiple records in TransactionList, they will executes ```report /sd...``` command to generate the report with or without a time period.
-
 ![Sample - Stage3](images/ReportFeature_Stage3.png)
 
 In step 3, the application used an external library named **'Apache-POI'**. This library helps to generate the summary report into an Excel file with the following format:
-
 ![Sample - CSV](images/CSV.JPG)
 
 The following activity diagram summarizes what happens when a user executes report command:
-
 ![Sample - Report Activity Diagram](images/Report%20Activity%20Diagram.png)
 
 <div style="page-break-after: always;"></div>
